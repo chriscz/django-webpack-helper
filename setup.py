@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name="django-webpack-helper",
     version="0.1.3",
-    url="httpd://github.com/chriscz/django-webpack-helper",
+    url="http://github.com/chriscz/django-webpack-helper",
     description="A django app that helps integrate webpack",
     author="Chris Coetzee",
     license='Mozilla Public License 2.0 (MPL 2.0)',
