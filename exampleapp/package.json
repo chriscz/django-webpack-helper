@@ -1,0 +1,7 @@
+{
+  "name": "django-exampleapp",
+  "version": "0.0.1",
+  "dependencies": {
+    "left-pad": "latest"
+  }
+}
