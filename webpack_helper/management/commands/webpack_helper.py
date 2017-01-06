@@ -23,7 +23,7 @@ class Command(ParsingBaseCommand):
 
     def handle(self, *args, **options):
         from django.apps import apps
-        from webpackhelper.conf import settings
+        from webpack_helper.conf import settings
 
         # --- load django settings settings
         NODE_BIN = os.path.join(settings.NODE_MODULES, '.bin')

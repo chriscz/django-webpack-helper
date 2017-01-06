@@ -26,5 +26,5 @@ class Command(ParsingBaseCommand):
 
     def handle(self, *args, **options):
         from django.apps import apps
-        from webpackhelper.conf import settings
+        from webpack_helper.conf import settings
         self.npm_install_app(settings, apps.get_app_config(options['app']))

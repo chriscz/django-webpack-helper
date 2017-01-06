@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "JS Support packages for django-webpack-helper",
   "author": "Chris Coetzee",
-  "license": "MPL",
+  "license": "Mozilla Public License 2.0 (MPL 2.0)",
   "main": "index.js",
   "dependencies": {
     "webpack": "^1.14.0",
