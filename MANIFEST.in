@@ -1,2 +1,2 @@
-recursive-include webpackhelper **/*.js
-recursive-include webpackhelper **/*.json
+recursive-include webpack_helper **/*.js
+recursive-include webpack_helper **/*.json
