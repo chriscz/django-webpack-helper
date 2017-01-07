@@ -1,3 +1,4 @@
+from __future__ import print_function
 import sys
 import os
 import re
@@ -98,3 +99,11 @@ settings.BUNDLE_DIR = relto(settings.STATIC_DIR, pre.BUNDLE_DIR, 'BUNDLE_DIR')
 
 settings.PUBLIC_PATH = pre.PUBLIC_PATH_BASE + '/' + pre.BUNDLE_DIR + '/'
 settings.PUBLIC_PATH = re.sub(r'/{2,}', '/', settings.PUBLIC_PATH)
+
+if not os.path.exists(settings.NODE_MODULES):
+    msg = "WEBPACK_HELPER['NODE_MODULES'] path does not exist: %s \n"\
+          "Set WEBPACK_HELPER['NODE_MODULES'] to a valid `node_modules/` directory "\
+          "in your `settings.py` file."
+    msg = msg % settings.NODE_MODULES
+    raise ImproperlyConfigured(msg)
+
