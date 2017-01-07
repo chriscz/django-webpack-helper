@@ -28,6 +28,16 @@ class Command(ParsingBaseCommand):
         # --- load django settings settings
         NODE_BIN = os.path.join(settings.NODE_MODULES, '.bin')
 
+        if not os.path.exists(NODE_BIN):
+            msg = "Could not locate webpack binary.\n"\
+                  "WEBPACK_HELPER['NODE_MODULES'] path does not exist: %s \n"\
+                  "Did you remember run npm_install webpack_helper?\n"\
+                  "If that succeeded, then you should set WEBPACK_HELPER['NODE_MODULES'] \n"\
+                  "to your project's `node_modules/` directory in `settings.py`"
+            msg = msg % settings.NODE_MODULES
+            raise ImproperlyConfigured(msg)
+
+
         # ensure paths exist
         mkdirs(settings.CONFIG_DIR)
         mkdirs(settings.STATS_DIR)
