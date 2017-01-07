@@ -54,8 +54,11 @@ WEBPACK_LOADER = {
 - Ensure that `BASE_DIR` and `STATIC_URL` are defined in your `settings.py`.
 - Ensure that `node` and `npm` is installed (I highly recommend looking at [node version manager ][nvm]).
   Then execute
-- create a packages.json file in the root of your project (Look at the `exampleapp/`
-  in this respository).
+- create a package.json file in the root of your project (Look at the `exampleapp/`
+  in this respository). To do this, you can execute the following:
+```
+npm init
+```
 - Install the initial webpack (1.x.x) dependencies for `django-webpack-helper`
 ```
 python manage.py npm_install webpack_helper --save
@@ -86,7 +89,7 @@ console.log("Hello World")
 ```
 - Now compile using webpack
 ```
-python manage.py webpack_helper mydjangoapp
+python manage.py webpackh mydjangoapp
 ```
 - Follow instructions from [django-webpack-loader][webpackloader] too include the
 javascript into your django templates.
@@ -96,7 +99,7 @@ javascript into your django templates.
 The package provides three commands:
 - `gen_webpack_config`
 - `npm_install`
-- `webpack_helper`
+- `webpackh`
 
 Execute `python manage.py <commandname> --help` for complete help
 of each command.
@@ -104,6 +107,9 @@ of each command.
 
 ## Live Reload
 - install [django-livereload-server][livereload] to get live reload capabilities
+
+## Additional Resources
+- http://owaislone.org/blog/webpack-plus-reactjs-and-django/
 
 ## Settings
 See the `settings.py` file in the root of this repository for a
